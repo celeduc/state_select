@@ -1,12 +1,14 @@
 StateSelect
 =============
  state_select plugin allows you to easyly create dropdown list of states for a country provided as an option.
- By default counrty is INDIA.
+ Default counrty is US.
 
  Usage:
- state_select(object, method, country='INDIA', options = {}, html_options = {})
+ state_select(object, method, country='US', options = {}, html_options = {})
 	
-	Currently it supports only India, US and Canada
+	Currently it supports only India, US, Canada and AUSTRALIA
+	
+	*Thanks keith(http://rubygreenblue.com/) for Australia states
 
  If you want to add other country plese send me the list of states and I will add them.
 
