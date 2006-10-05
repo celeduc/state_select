@@ -118,6 +118,11 @@
           <td>=</td>
           <td class="context-item-value">[&quot;Australian Capital Territory&quot;, &quot;New South Wales&quot;, &quot;Northern Territory&quot;, &quot;Queensland&quot;, &quot;South Australia&quot;, &quot;Tasmania&quot;, &quot;Victoria&quot;, &quot;Western Australia&quot;] unless const_defined?(&quot;AUSTRALIA_STATES&quot;)</td>
         </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">SPAIN_STATES</td>
+          <td>=</td>
+          <td class="context-item-value">[ &quot;Alava&quot;, &quot;Albacete&quot;, &quot;Alicante&quot;, &quot;Almeria&quot;, &quot;Asturias&quot;, &quot;Avila&quot;, &quot;Badajoz&quot;, &quot;Barcelona&quot;, &quot;Burgos&quot;, &quot;Caceres&quot;, &quot;Cadiz&quot;, &quot;Cantrabria&quot;, &quot;Castellon&quot;, &quot;Ceuta&quot;, &quot;Ciudad Real&quot;, &quot;Cordoba&quot;, &quot;Cuenca&quot;, &quot;Girona&quot;, &quot;Granada&quot;, &quot;Guadalajara&quot;, &quot;Guipuzcoa&quot;, &quot;Huelva&quot;, &quot;Huesca&quot;, &quot;Islas Baleares&quot;, &quot;Jaen&quot;, &quot;La Coruna&quot;,&quot;Leon&quot;, &quot;Lleida&quot;, &quot;Lugo&quot;, &quot;Madrid&quot;, &quot;Malaga&quot;, &quot;Melilla&quot;, &quot;Murcia&quot;, &quot;Navarra&quot;, &quot;Ourense&quot;, &quot;Palencia&quot;, &quot;Palmas, Las&quot;, &quot;Pontevedra&quot;, &quot;Rioja, La&quot;, &quot;Salamanda&quot;,  &quot;Santa Cruz de Tenerife&quot;, &quot;Segovia&quot;, &quot;Sevila&quot;, &quot;Soria&quot;, &quot;Tarragona&quot;, &quot;Teruel&quot;, &quot;Toledo&quot;, &quot;Valencia&quot;, &quot;Valladolid&quot;, &quot;Vizcaya&quot;, &quot;Zamora&quot;, &quot;Zaragoza&quot;] unless const_defined?(&quot;SPAIN_STATES&quot;)</td>
+        </tr>
         </table>
       </div>
     </div>
@@ -153,14 +158,14 @@ regular HTML select tag.
             onclick="toggleCode('M000002-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000002-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/state_select.rb, line 13</span>
-13:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">state_options_for_select</span>(<span class="ruby-identifier">selected</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">country</span> = <span class="ruby-value str">'US'</span>)
-14:     <span class="ruby-identifier">state_options</span> = <span class="ruby-value str">&quot;&quot;</span>
-15:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">country</span>
-16:       <span class="ruby-identifier">state_options</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">options_for_select</span>(<span class="ruby-identifier">eval</span>(<span class="ruby-identifier">country</span><span class="ruby-operator">+</span><span class="ruby-value str">'_STATES'</span>), <span class="ruby-identifier">selected</span>)
-17:     <span class="ruby-keyword kw">end</span>
-18:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">state_options</span>
-19:   <span class="ruby-keyword kw">end</span>
+<span class="ruby-comment cmt"># File lib/state_select.rb, line 13</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">state_options_for_select</span>(<span class="ruby-identifier">selected</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">country</span> = <span class="ruby-value str">'US'</span>)
+    <span class="ruby-identifier">state_options</span> = <span class="ruby-value str">&quot;&quot;</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">country</span>
+      <span class="ruby-identifier">state_options</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">options_for_select</span>(<span class="ruby-identifier">eval</span>(<span class="ruby-identifier">country</span><span class="ruby-operator">+</span><span class="ruby-value str">'_STATES'</span>), <span class="ruby-identifier">selected</span>)
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">state_options</span>
+  <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -185,10 +190,10 @@ generate the list of option tags.
             onclick="toggleCode('M000001-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000001-source">
 <pre>
-   <span class="ruby-comment cmt"># File lib/state_select.rb, line 4</span>
-4:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">state_select</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">method</span>, <span class="ruby-identifier">country</span>=<span class="ruby-value str">'US'</span>, <span class="ruby-identifier">options</span> = {}, <span class="ruby-identifier">html_options</span> = {})
-5:     <span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">Helpers</span><span class="ruby-operator">::</span><span class="ruby-constant">InstanceTag</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">method</span>, <span class="ruby-keyword kw">self</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">:object</span>)).<span class="ruby-identifier">to_state_select_tag</span>(<span class="ruby-identifier">country</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">html_options</span>)
-6:   <span class="ruby-keyword kw">end</span>
+<span class="ruby-comment cmt"># File lib/state_select.rb, line 4</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">state_select</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">method</span>, <span class="ruby-identifier">country</span>=<span class="ruby-value str">'US'</span>, <span class="ruby-identifier">options</span> = {}, <span class="ruby-identifier">html_options</span> = {})
+    <span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">Helpers</span><span class="ruby-operator">::</span><span class="ruby-constant">InstanceTag</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">method</span>, <span class="ruby-keyword kw">self</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">:object</span>)).<span class="ruby-identifier">to_state_select_tag</span>(<span class="ruby-identifier">country</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">html_options</span>)
+  <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
