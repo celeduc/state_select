@@ -6,11 +6,12 @@ StateSelect
  Usage:
  state_select(object, method, country='US', options = {}, html_options = {})
   
-	Currently it supports only INDIA US, CANADA, AUSTRALIA, SPAIN and UGANDA
+	Currently it supports only INDIA US, CANADA, AUSTRALIA, SPAIN, FRANCE and UGANDA
 	
 	*Thanks keith(http://rubygreenblue.com/) for Australia states
 	*Thanks Vicent (http://www.vicentgozalbes.com/) for Spain states
 	*Thanks Chuck Phillips for Uganda states
+	*Thanks Jonathan Tron for France states
 
  If you want to add other country plese send me the list of states and I will add them.
 
