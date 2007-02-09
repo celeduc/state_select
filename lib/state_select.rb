@@ -27,6 +27,7 @@ module ActionView::Helpers::FormOptionsHelper
   SPAIN_STATES=[ "Alava", "Albacete", "Alicante", "Almeria", "Asturias", "Avila", "Badajoz", "Barcelona", "Burgos", "Caceres", "Cadiz", "Cantrabria", "Castellon", "Ceuta", "Ciudad Real", "Cordoba", "Cuenca", "Girona", "Granada", "Guadalajara", "Guipuzcoa", "Huelva", "Huesca", "Islas Baleares", "Jaen", "La Coruna","Leon", "Lleida", "Lugo", "Madrid", "Malaga", "Melilla", "Murcia", "Navarra", "Ourense", "Palencia", "Palmas, Las", "Pontevedra", "Rioja, La", "Salamanda",  "Santa Cruz de Tenerife", "Segovia", "Sevila", "Soria", "Tarragona", "Teruel", "Toledo", "Valencia", "Valladolid", "Vizcaya", "Zamora", "Zaragoza"] unless const_defined?("SPAIN_STATES")
   UGANDA_STATES=["Abim", "Adjumani", "Amolatar", "Amuria", "Apac", "Arua", "Budaka", "Bugiri", "Bukwa", "Bulisa", "Bundibugyo", "Bushenyi", "Busia", "Busiki", "Butaleja", "Dokolo", "Gulu", "Hoima", "Ibanda", "Iganga", "Jinja", "Kaabong", "Kabale", "Kabarole", "Kaberamaido", "Kabingo", "Kalangala", "Kaliro", "Kampala", "Kamuli", "Kamwenge", "Kanungu", "Kapchorwa", "Kasese", "Katakwi", "Kayunga", "Kibale", "Kiboga", "Kilak", "Kiruhura", "Kisoro", "Kitgum", "Koboko", "Kotido", "Kumi", "Kyenjojo", "Lira", "Luwero", "Manafwa", "Maracha", "Masaka", "Masindi", "Mayuge", "Mbale", "Mbarara", "Mityana", "Moroto", "Moyo", "Mpigi", "Mubende", "Mukono", "Nakapiripirit", "Nakaseke", "Nakasongola", "Nebbi", "Ntungamo", "Oyam", "Pader", "Pallisa", "Rakai", "Rukungiri", "Sembabule", "Sironko", "Soroti", "Tororo", "Wakiso", "Yumbe"] unless const_defined?("UGANDA_STATES")
   FRANCE_STATES=["Alsace","Aquitaine","Auvergne","Bourgogne","Bretagne","Centre","Champagne-Ardenne","Corse","Franche-Comte","Ile-de-France","Languedoc-Roussillon","Limousin","Lorraine","Midi-Pyrenees","Nord-Pas-de-Calais","Basse-Normandie","Haute-Normandie","Pays de la Loire","Picardie","Poitou-Charentes","Provence-Alpes-Cote d'Azur","Rhone-Alpes"] unless const_defined?("FRENCE_STATES")
+  GERMAN_STATES=["Baden-Wurttemberg", "Bayern", "Berlin", "Brandenburg", "Bremen", "Hamburg", "Hessen", "Mecklenburg- Vorpommern", "Niedersachsen", "Nordrhein-Westfalen", "Rhineland- Pflaz", "Saarland", "Sachsen", "Sachsen-Anhalt", "Schleswig- Holstein", "Thuringen"]  unless const_defined?("GERMAN_STATES")
 end
 
 class ActionView::Helpers::InstanceTag
@@ -35,6 +36,7 @@ class ActionView::Helpers::InstanceTag
   def to_state_select_tag(country, options, html_options)
     html_options = html_options.stringify_keys
     add_default_name_and_id(html_options)
+    value=nil
     selected_value = options.has_key?(:selected) ? options[:selected] : value
     content_tag("select", add_options(state_options_for_select(selected_value, country), options, value), html_options)
   end

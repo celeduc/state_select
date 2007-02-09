@@ -122,13 +122,14 @@
             onclick="toggleCode('M000004-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000004-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/state_select.rb, line 35</span>
-35:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_state_select_tag</span>(<span class="ruby-identifier">country</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">html_options</span>)
-36:     <span class="ruby-identifier">html_options</span> = <span class="ruby-identifier">html_options</span>.<span class="ruby-identifier">stringify_keys</span>
-37:     <span class="ruby-identifier">add_default_name_and_id</span>(<span class="ruby-identifier">html_options</span>)
-38:     <span class="ruby-identifier">selected_value</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">:selected</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:selected</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">value</span>
-39:     <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;select&quot;</span>, <span class="ruby-identifier">add_options</span>(<span class="ruby-identifier">state_options_for_select</span>(<span class="ruby-identifier">selected_value</span>, <span class="ruby-identifier">country</span>), <span class="ruby-identifier">options</span>, <span class="ruby-identifier">value</span>), <span class="ruby-identifier">html_options</span>)
-40:   <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/state_select.rb, line 36</span>
+36:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_state_select_tag</span>(<span class="ruby-identifier">country</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">html_options</span>)
+37:     <span class="ruby-identifier">html_options</span> = <span class="ruby-identifier">html_options</span>.<span class="ruby-identifier">stringify_keys</span>
+38:     <span class="ruby-identifier">add_default_name_and_id</span>(<span class="ruby-identifier">html_options</span>)
+39:     <span class="ruby-identifier">value</span>=<span class="ruby-keyword kw">nil</span>
+40:     <span class="ruby-identifier">selected_value</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">:selected</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:selected</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">value</span>
+41:     <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;select&quot;</span>, <span class="ruby-identifier">add_options</span>(<span class="ruby-identifier">state_options_for_select</span>(<span class="ruby-identifier">selected_value</span>, <span class="ruby-identifier">country</span>), <span class="ruby-identifier">options</span>, <span class="ruby-identifier">value</span>), <span class="ruby-identifier">html_options</span>)
+42:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
