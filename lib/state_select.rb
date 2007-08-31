@@ -36,7 +36,7 @@ class ActionView::Helpers::InstanceTag
   def to_state_select_tag(country, options, html_options)
     html_options = html_options.stringify_keys
     add_default_name_and_id(html_options)
-    value=nil
+    value = value(object)
     selected_value = options.has_key?(:selected) ? options[:selected] : value
     content_tag("select", add_options(state_options_for_select(selected_value, country), options, value), html_options)
   end
