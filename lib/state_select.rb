@@ -1,8 +1,9 @@
 module ActionView::Helpers::FormOptionsHelper
   
   # Return select and option tags for the given object and method, using state_options_for_select to generate the list of option tags.
-  def state_select(object, method, country='US', options = {}, html_options = {})
-    ActionView::Helpers::InstanceTag.new(object, method, self, nil, options.delete(:object)).to_state_select_tag(country, options, html_options)
+  def state_select(object, method, options = {}, html_options = {})
+    options['country'] ||= 'US'
+    ActionView::Helpers::InstanceTag.new(object, method, self, nil, options.delete(:object)).to_state_select_tag(options.delete('country'), options, html_options)
   end
   
   # Returns a string of option tags for states in a country. Supply a state name as +selected+ to
@@ -44,8 +45,8 @@ end
 
 
 class ActionView::Helpers::FormBuilder
-  def state_select(method, country = 'US', options = {}, html_options = {})
-    @template.state_select(@object_name, method, country, options.merge(:object => @object), html_options)
+  def state_select(method, options = {}, html_options = {})
+    options['country'] ||= 'US'
+    @template.state_select(@object_name, method, options.merge(:object => @object), html_options)
   end
 end 
-
