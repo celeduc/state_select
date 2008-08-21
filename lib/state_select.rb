@@ -30,6 +30,10 @@ module ActionView::Helpers::FormOptionsHelper
   FRANCE_STATES=["Alsace","Aquitaine","Auvergne","Bourgogne","Bretagne","Centre","Champagne-Ardenne","Corse","Franche-Comte","Ile-de-France","Languedoc-Roussillon","Limousin","Lorraine","Midi-Pyrenees","Nord-Pas-de-Calais","Basse-Normandie","Haute-Normandie","Pays de la Loire","Picardie","Poitou-Charentes","Provence-Alpes-Cote d'Azur","Rhone-Alpes"] unless const_defined?("FRENCE_STATES")
   GERMAN_STATES=["Baden-Wurttemberg", "Bayern", "Berlin", "Brandenburg", "Bremen", "Hamburg", "Hessen", "Mecklenburg- Vorpommern", "Niedersachsen", "Nordrhein-Westfalen", "Rhineland- Pflaz", "Saarland", "Sachsen", "Sachsen-Anhalt", "Schleswig- Holstein", "Thuringen"]  unless const_defined?("GERMAN_STATES")
 	UK_STATES=["Avon", "Bedfordshire", "Berkshire", "Buckinghamshire", "Cambridgeshire", "Cheshire", "Cleveland", "Cornwall", "Cumbria", "Derbyshire", "Devon", "Dorset", "Durham", "Essex", "Gloucestershire", "Hampshire", "Hereford & Worcester", "Hertfordshire", "Humberside", "Kent", "Lancashire", "Leicestershire", "Lincolnshire", "London", "Manchester", "Merseyside", "Norfolk", "Northamptonshire", "Northumberland", "Nottinghamshire", "Oxfordshire", "Shropshire", "Somerset", "Staffordshire", "Suffolk", "Surrey", "Sussex", "Tyne & Wear", "Warwickshire", "West Midlands", "Wiltshire", "Yorkshire"]  unless const_defined?("UK_STATES")
+	SCOTLAND_STATES=["Aberdeen City", "Aberdeenshire", "Angus", "Argyll & Bute", "Clackmannanshire", "Dumfries & Galloway", "Dundee City", "East Ayrshire", "East Dunbartonshire", "East Lothian", "East Renfrewshire", "Edinburgh", "Falkirk", "Fife", "Glasgow", "Highland", "Inverclyde", "Midlothian",
+"Moray", "North Ayrshire", "North Lanarkshire", "Orkney", "Perth & Kinross", "Renfrewshire",
+"Scottish Borders", "Shetland", "South Ayrshire", "South Lanarkshire", "Stirling", 
+"West Dunbartonshire", "West Lothian", "Western Isles"]  unless const_defined?("SCOTLAND_STATES")
 
 end
 
