@@ -26,6 +26,14 @@
 <%= state_select :profile, :location, country='US' %>
 <% elsif params[:country] == "United Kingdom" %>
 <%= state_select :profile, :location, country='UK' %>
+<% elsif params[:country] == "England" %>
+<%= state_select :profile, :location, country='UK' %>
+<% elsif params[:country] == "Ireland" %>
+<%= state_select :profile, :location, country='IRELAND' %>
+<% elsif params[:country] == "Scotland" %>
+<%= state_select :profile, :location, country='SCOTLAND' %>
+<% elsif params[:country] == "Wales" %>
+<%= state_select :profile, :location, country='WALES' %>
 <% elsif params[:country] == "India" %>
 <%= state_select :profile, :location, country='INDIA' %>
 <% elsif params[:country] == "Canada" %>
