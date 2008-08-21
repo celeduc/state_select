@@ -34,6 +34,9 @@ module ActionView::Helpers::FormOptionsHelper
 "Moray", "North Ayrshire", "North Lanarkshire", "Orkney", "Perth & Kinross", "Renfrewshire",
 "Scottish Borders", "Shetland", "South Ayrshire", "South Lanarkshire", "Stirling", 
 "West Dunbartonshire", "West Lothian", "Western Isles"]  unless const_defined?("SCOTLAND_STATES")
+	WALES_STATES=["Aberystwyth", "Builth Wells", "Brecon Beacons", "Cardiff", "Caernarfon", 
+"Fishguard", "Holyhead", "Llangollen", "Pembrokshire", "Snowdonia", 
+"Swansea"]  unless const_defined?("WALES_STATES")
 
 end
 
