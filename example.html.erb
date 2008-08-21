@@ -1,0 +1,46 @@
+# example entry form
+
+<tr>
+	<td class="f_right">Country</td>
+	<td><%= country_select(:profile, :country, priority_countries=['United Kingdom','United States'])%></td>
+</tr>
+
+<tr>
+	<td class="f_right">Location</td>
+	<td>
+		<%= observe_field :profile_country, :frequency=>0.5,
+			:update=>"state_select",
+			:url=> {:action=>'state_select', :only_path=>false},
+			:with=>"'country=' + encodeURIComponent(value)" %>
+
+		<div id="state_select">
+		<%= state_select :profile, :location, country='UK' %>
+		</div>
+	</td>
+</tr>
+
+
+# and put this in a partial called _state_select.html.erb
+
+<% if params[:country] == "United States" %>
+<%= state_select :profile, :location, country='US' %>
+<% elsif params[:country] == "United Kingdom" %>
+<%= state_select :profile, :location, country='UK' %>
+<% elsif params[:country] == "India" %>
+<%= state_select :profile, :location, country='INDIA' %>
+<% elsif params[:country] == "Canada" %>
+<%= state_select :profile, :location, country='CANADA' %>
+<% elsif params[:country] == "Australia" %>
+<%= state_select :profile, :location, country='AUSTRALIA' %>
+<% elsif params[:country] == "Spain" %>
+<%= state_select :profile, :location, country='SPAIN' %>
+<% elsif params[:country] == "Uganda" %>
+<%= state_select :profile, :location, country='UGANDA' %>
+<% elsif params[:country] == "France" %>
+<%= state_select :profile, :location, country='FRANCE' %>
+<% elsif params[:country] == "Germany" %>
+<%= state_select :profile, :location, country='GERMAN' %>
+<% else %>
+<%= text_field :profile, :location, :class=>"text" %>
+<% end %>
+
